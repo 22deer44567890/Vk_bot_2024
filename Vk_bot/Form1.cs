@@ -80,5 +80,11 @@ namespace Vk_bot
             }
         }
 
+        private void TEST_Click(object sender, EventArgs e)
+        {
+            friends_add form = new friends_add();
+            form.access_token =  access_token;
+            form.ShowDialog();
+        }
     }
 }
