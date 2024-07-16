@@ -80,11 +80,16 @@ namespace Vk_bot
             }
         }
 
-        private void buttonTest_Click(object sender, EventArgs e)
+        private void buttonBotSheduler_Click(object sender, EventArgs e)
         {
-            FormTest form = new FormTest();
-            form.access_token = access_token;
+            FormBotSheduler form = new FormBotSheduler();
+            //form.access_token = access_token;
             form.ShowDialog();
+        }
+
+        private void chromiumWebBrowser1_LoadingStateChanged(object sender, LoadingStateChangedEventArgs e)
+        {
+
         }
     }
 }
