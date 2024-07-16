@@ -83,7 +83,7 @@ namespace Vk_bot
 
         private void buttonTest_Click(object sender, EventArgs e)
         {
-            FormTest form = new FormTest();
+            friends_add form = new friends_add();
             form.access_token = access_token;
             form.ShowDialog();
         }
@@ -93,5 +93,7 @@ namespace Vk_bot
             //form.access_token = access_token;
             form.ShowDialog();
         }
+
+
     }
 }

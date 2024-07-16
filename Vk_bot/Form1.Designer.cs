@@ -35,6 +35,7 @@ namespace Vk_bot
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.buttonTest = new System.Windows.Forms.Button();
             this.buttonBotSheduler = new System.Windows.Forms.Button();
+            this.buttonShedule = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,11 +74,11 @@ namespace Vk_bot
             // 
             // buttonTest
             // 
-            this.buttonTest.Location = new System.Drawing.Point(583, 50);
+            this.buttonTest.Location = new System.Drawing.Point(571, 12);
             this.buttonTest.Name = "buttonTest";
-            this.buttonTest.Size = new System.Drawing.Size(165, 60);
+            this.buttonTest.Size = new System.Drawing.Size(165, 98);
             this.buttonTest.TabIndex = 8;
-            this.buttonTest.Text = "button1";
+            this.buttonTest.Text = "Добавить друзей из рекомендаций";
             this.buttonTest.UseVisualStyleBackColor = true;
             this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
             // 
@@ -90,18 +91,27 @@ namespace Vk_bot
             this.buttonBotSheduler.Text = "Перейти на форму";
             this.buttonBotSheduler.UseVisualStyleBackColor = true;
             this.buttonBotSheduler.Click += new System.EventHandler(this.buttonBotSheduler_Click);
-
+            // 
+            // buttonShedule
+            // 
+            this.buttonShedule.Location = new System.Drawing.Point(571, 216);
+            this.buttonShedule.Name = "buttonShedule";
+            this.buttonShedule.Size = new System.Drawing.Size(165, 60);
+            this.buttonShedule.TabIndex = 9;
+            this.buttonShedule.Text = "Бот расписания";
+            this.buttonShedule.UseVisualStyleBackColor = true;
+            this.buttonShedule.Click += new System.EventHandler(this.buttonBotSheduler_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 448);
+            this.Controls.Add(this.buttonShedule);
             this.Controls.Add(this.buttonTest);
             this.Controls.Add(this.chromiumWebBrowser1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.TEST);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
@@ -119,7 +129,8 @@ namespace Vk_bot
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button buttonTest;
-                private System.Windows.Forms.Button buttonBotSheduler;
+        private System.Windows.Forms.Button buttonBotSheduler;
+        private System.Windows.Forms.Button buttonShedule;
     }
 }
 
