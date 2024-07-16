@@ -1,4 +1,4 @@
-﻿using CefSharp;
+using CefSharp;
 using CefSharp.WinForms;
 using Newtonsoft.Json;
 using System;
@@ -85,6 +85,12 @@ namespace Vk_bot
         {
             FormTest form = new FormTest();
             form.access_token = access_token;
+            form.ShowDialog();
+        }
+          private void buttonBotSheduler_Click(object sender, EventArgs e)
+        {
+            FormBotSheduler form = new FormBotSheduler();
+            //form.access_token = access_token;
             form.ShowDialog();
         }
     }

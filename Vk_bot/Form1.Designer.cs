@@ -1,4 +1,4 @@
-﻿namespace Vk_bot
+namespace Vk_bot
 {
     partial class Form1
     {
@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.buttonTest = new System.Windows.Forms.Button();
+            this.buttonBotSheduler = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +81,17 @@
             this.buttonTest.UseVisualStyleBackColor = true;
             this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
             // 
+            // buttonBotSheduler
+            // 
+            this.buttonBotSheduler.Location = new System.Drawing.Point(597, 12);
+            this.buttonBotSheduler.Name = "buttonBotSheduler";
+            this.buttonBotSheduler.Size = new System.Drawing.Size(167, 77);
+            this.buttonBotSheduler.TabIndex = 8;
+            this.buttonBotSheduler.Text = "Перейти на форму";
+            this.buttonBotSheduler.UseVisualStyleBackColor = true;
+            this.buttonBotSheduler.Click += new System.EventHandler(this.buttonBotSheduler_Click);
+
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -107,6 +119,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button buttonTest;
+                private System.Windows.Forms.Button buttonBotSheduler;
     }
 }
+
 
