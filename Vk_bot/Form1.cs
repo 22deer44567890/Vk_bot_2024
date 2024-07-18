@@ -1,4 +1,4 @@
-﻿using CefSharp;
+using CefSharp;
 using CefSharp.WinForms;
 using Newtonsoft.Json;
 using System;
@@ -17,7 +17,10 @@ namespace Vk_bot
 {
     public partial class Form1 : Form
     {
+        bool isRegistred = false;
         string access_token;
+
+        public string Answer { get; private set; }
 
         public Form1()
         {
@@ -83,9 +86,40 @@ namespace Vk_bot
 
         private void buttonTest_Click(object sender, EventArgs e)
         {
-            FormTest form = new FormTest();
+            friends_add form = new friends_add();
             form.access_token = access_token;
             form.ShowDialog();
+        }
+          private void buttonBotSheduler_Click(object sender, EventArgs e)
+        {
+            FormBotSheduler form = new FormBotSheduler();
+            //form.access_token = access_token;
+            form.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string Api;
+            Api = "https://api.vk.com/method/groups.isMember?" + "group_id=226636258&" + access_token + "&v=5.199";
+            WebClient client = new WebClient();
+            client.DownloadData(Api);
+            string Answer = Encoding.UTF8.GetString(client.DownloadData(Api));
+            textBox1.Text += Answer + "\r\n\r\n\r\n\r\n";
+            if (Answer == "{\"response\":1}")
+            {
+                button2.Enabled=true;
+                button3.Enabled = true;
+
+            }
+            else
+            {
+                isRegistred = true;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

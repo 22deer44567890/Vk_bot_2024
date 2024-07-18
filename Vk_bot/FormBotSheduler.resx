@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="timerBotMess.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="textBox3.Text" xml:space="preserve">
+    <value>access_token=vk1.a.aFj3tyu19vxRmrmv0AMGwEj-ndOL-4gr_yRu9N360mR6WBSZElbTGqi0PS-ehiwQD_td_NTK7dTe15EQGVHthltXoWoSCRv-ZXs5SovH4CDtR27qkisja7zwTSUnGGqBAKAFZ5s-E_1M3yvMiL_uCqFKTKcsZUfEx3Dk-fhY5S3t9la0kYPBEMCtUPIzDoOCnYFX8PEdhu_lISJTeuQP7w</value>
+  </data>
 </root>
