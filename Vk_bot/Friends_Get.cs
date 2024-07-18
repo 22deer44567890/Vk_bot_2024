@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vk_bot.Vk_methods
+namespace Vk_bot
 {
-    internal class FriendsGet
+    internal class Friends_Get
     {
         public Response response { get; set; }
-
         public class Item
         {
             public int id { get; set; }
@@ -19,7 +18,7 @@ namespace Vk_bot.Vk_methods
             public string last_name { get; set; }
             public bool can_access_closed { get; set; }
             public bool is_closed { get; set; }
-            public List<int> lists { get; set; }
+            public string deactivated { get; set; }
         }
 
         public class Response
@@ -27,5 +26,7 @@ namespace Vk_bot.Vk_methods
             public int count { get; set; }
             public List<Item> items { get; set; }
         }
+
     }
 }
+
