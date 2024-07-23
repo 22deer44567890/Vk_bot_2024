@@ -47,6 +47,7 @@ namespace Vk_bot
             // 
             this.chromiumWebBrowser1.ActivateBrowserOnCreation = false;
             this.chromiumWebBrowser1.Location = new System.Drawing.Point(-56, 378);
+            this.chromiumWebBrowser1.Location = new System.Drawing.Point(12, 216);
             this.chromiumWebBrowser1.Name = "chromiumWebBrowser1";
             this.chromiumWebBrowser1.Size = new System.Drawing.Size(266, 108);
             this.chromiumWebBrowser1.TabIndex = 4;
@@ -140,7 +141,7 @@ namespace Vk_bot
             this.label2.Size = new System.Drawing.Size(495, 130);
             this.label2.TabIndex = 0;
             this.label2.Text = "МЫ ИЗ ФСБ РОССИИ\r\nТРЕБУЕМ 50 РУБЛЕЙ НА КАРТУ ТИНЬКОФФ \r\nИЛИ ВАС ЖДЕТ ДДОС АТАКА!\r" +
-    "\nЭТО ШУТКА НЕ СОЖАЙТЕ МЕНЯ!!!\r\n\r\n";
+    "\nЭТО ШУТКА, НЕ СОЖАЙТЕ МЕНЯ!!!\r\n\r\n";
             // 
             // Form1
             // 
@@ -152,6 +153,8 @@ namespace Vk_bot
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonShedule);
             this.Controls.Add(this.buttonTest);
+            this.Controls.Add(this.chromiumWebBrowser1);
+            this.Controls.Add(this.chromiumWebBrowser2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
