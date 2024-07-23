@@ -18,6 +18,7 @@ namespace Vk_bot
     public partial class Form1 : Form
     {
         string access_token;
+        bool isRegistred = true;
 
         public Form1()
         {
@@ -57,7 +58,7 @@ namespace Vk_bot
                 int Position2 = Url.IndexOf("&");
                 Url = Url.Remove(Position2);
                 access_token = Url;
-              
+
 
 
                 //Если получили access_token то получаем данные пользователя
@@ -77,6 +78,18 @@ namespace Vk_bot
 
                 //после получения access_token скрываем Browser
                 chromiumWebBrowser1.Hide();
+
+                if (isRegistred == true)
+                {
+                    panel1.Visible = false;
+                }
+                else
+                {
+                    panel1.Visible = true;
+                    MessageBox.Show("Вы не купили программу! Это можно сделать в нашей группе");
+                    chromiumWebBrowser2.Visible = true;
+                    chromiumWebBrowser2.LoadUrl("https://vk.com/army_friend_po");
+                }
             }
         }
 
@@ -94,6 +107,9 @@ namespace Vk_bot
             form.ShowDialog();
         }
 
-
+        private void chromiumWebBrowser2_LoadingStateChanged(object sender, LoadingStateChangedEventArgs e)
+        {
+            
+        }
     }
 }

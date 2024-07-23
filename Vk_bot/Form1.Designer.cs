@@ -36,12 +36,17 @@ namespace Vk_bot
             this.buttonTest = new System.Windows.Forms.Button();
             this.buttonBotSheduler = new System.Windows.Forms.Button();
             this.buttonShedule = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.chromiumWebBrowser2 = new CefSharp.WinForms.ChromiumWebBrowser();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // chromiumWebBrowser1
             // 
             this.chromiumWebBrowser1.ActivateBrowserOnCreation = false;
+            this.chromiumWebBrowser1.Location = new System.Drawing.Point(-56, 378);
             this.chromiumWebBrowser1.Location = new System.Drawing.Point(12, 216);
             this.chromiumWebBrowser1.Name = "chromiumWebBrowser1";
             this.chromiumWebBrowser1.Size = new System.Drawing.Size(266, 108);
@@ -102,22 +107,62 @@ namespace Vk_bot
             this.buttonShedule.UseVisualStyleBackColor = true;
             this.buttonShedule.Click += new System.EventHandler(this.buttonBotSheduler_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.chromiumWebBrowser2);
+            this.panel1.Controls.Add(this.chromiumWebBrowser1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(844, 457);
+            this.panel1.TabIndex = 10;
+            // 
+            // chromiumWebBrowser2
+            // 
+            this.chromiumWebBrowser2.ActivateBrowserOnCreation = false;
+            this.chromiumWebBrowser2.Location = new System.Drawing.Point(0, 115);
+            this.chromiumWebBrowser2.Name = "chromiumWebBrowser2";
+            this.chromiumWebBrowser2.Size = new System.Drawing.Size(844, 273);
+            this.chromiumWebBrowser2.TabIndex = 5;
+            this.chromiumWebBrowser2.Visible = false;
+            this.chromiumWebBrowser2.LoadingStateChanged += new System.EventHandler<CefSharp.LoadingStateChangedEventArgs>(this.chromiumWebBrowser2_LoadingStateChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(171, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(495, 130);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "МЫ ИЗ ФСБ РОССИИ\r\nТРЕБУЕМ 50 РУБЛЕЙ НА КАРТУ ТИНЬКОФФ \r\nИЛИ ВАС ЖДЕТ ДДОС АТАКА!\r" +
+    "\nЭТО ШУТКА, НЕ СОЖАЙТЕ МЕНЯ!!!\r\n\r\n";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 448);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonShedule);
             this.Controls.Add(this.buttonTest);
             this.Controls.Add(this.chromiumWebBrowser1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.chromiumWebBrowser2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,6 +176,9 @@ namespace Vk_bot
         private System.Windows.Forms.Button buttonTest;
         private System.Windows.Forms.Button buttonBotSheduler;
         private System.Windows.Forms.Button buttonShedule;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private CefSharp.WinForms.ChromiumWebBrowser chromiumWebBrowser2;
     }
 }
 
