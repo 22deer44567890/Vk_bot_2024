@@ -17,10 +17,9 @@ namespace Vk_bot
 {
     public partial class Form1 : Form
     {
-        bool isRegistred = false;
-        string access_token;
-
         public string Answer { get; private set; }
+        string access_token;
+        bool isRegistred = true;
 
         public Form1()
         {
@@ -60,8 +59,6 @@ namespace Vk_bot
                 int Position2 = Url.IndexOf("&");
                 Url = Url.Remove(Position2);
                 access_token = Url;
-              
-
 
                 //Если получили access_token то получаем данные пользователя
                 string ApiRequest;
@@ -80,6 +77,33 @@ namespace Vk_bot
 
                 //после получения access_token скрываем Browser
                 chromiumWebBrowser1.Hide();
+                string Api;
+                Api = "https://api.vk.com/method/groups.isMember?" + "group_id=226636258&" + access_token + "&v=5.199";
+                WebClient client = new WebClient();
+                client.DownloadData(Api);
+                string Answer = Encoding.UTF8.GetString(client.DownloadData(Api));
+                textBox1.Text += Answer + "\r\n\r\n\r\n\r\n";
+                if (Answer == "{\"response\":1}")
+                {
+                    button2.Enabled=true;
+                    button3.Enabled = true;
+
+                }
+                else
+                {
+                    isRegistred = true;
+                }
+                if (isRegistred == true)
+                {
+                    panel1.Visible = false;
+                }
+                else
+                {
+                    panel1.Visible = true;
+                    MessageBox.Show("Вы не купили программу! Это можно сделать в нашей группе");
+                    chromiumWebBrowser2.Visible = true;
+                    chromiumWebBrowser2.LoadUrl("https://vk.com/army_friend_po");
+                }
             }
         }
 
@@ -97,29 +121,9 @@ namespace Vk_bot
             form.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void chromiumWebBrowser2_LoadingStateChanged(object sender, LoadingStateChangedEventArgs e)
         {
-            string Api;
-            Api = "https://api.vk.com/method/groups.isMember?" + "group_id=226636258&" + access_token + "&v=5.199";
-            WebClient client = new WebClient();
-            client.DownloadData(Api);
-            string Answer = Encoding.UTF8.GetString(client.DownloadData(Api));
-            textBox1.Text += Answer + "\r\n\r\n\r\n\r\n";
-            if (Answer == "{\"response\":1}")
-            {
-                button2.Enabled=true;
-                button3.Enabled = true;
-
-            }
-            else
-            {
-                isRegistred = true;
-            }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            
         }
     }
 }
